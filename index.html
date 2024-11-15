@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ankieta Pożyczkowa</title>
+<meta name="description" content="Znajdź Idealną Pożyczkę to interaktywny formularz, który pomaga użytkownikom znaleźć najlepsze pożyczki w zależności od celu, dochodów i potrzeb. Odpowiedz na pytania i uzyskaj dopasowane rozwiązania.">
+<meta property="og:title" content="Znajdź Idealną Pożyczkę">
+<meta property="og:description" content="Znajdź Idealną Pożyczkę to interaktywny formularz, który pomaga użytkownikom znaleźć najlepsze pożyczki w zależności od celu, dochodów i potrzeb. Odpowiedz na pytania i uzyskaj dopasowane rozwiązania.">
+<meta property="og:image" content="url_de_l_image_pour_partage">
+<meta property="og:url" content="url_de_ton_site">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "eYrpSqmEKtsSAX0lt",
+            });
+        })();
+    </script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Znajdź Idealną Pożyczkę</h1>
+        <p>Odpowiedz na poniższe pytania, aby znaleźć najlepsze rozwiązanie dla Ciebie.</p>
+    </div>
+
+    <div class="progress">Pytanie <span id="currentStep">1</span> z 5</div>
+
+    <div id="step1" class="question-container active">
+        <h2>Jaki jest cel Twojej pożyczki?</h2>
+        <div class="options">
+            <div class="option" onclick="selectOption(this, 1)">Zakup nieruchomości</div>
+            <div class="option" onclick="selectOption(this, 1)">Projekt biznesowy</div>
+            <div class="option" onclick="selectOption(this, 1)">Remont</div>
+            <div class="option" onclick="selectOption(this, 1)">Zakup samochodu</div>
+            <div class="option" onclick="selectOption(this, 1)">Konsolidacja długów</div>
+            <div class="option" onclick="selectOption(this, 1)">Refinansowanie</div>
+            <div class="option" onclick="selectOption(this, 1)">Edukacja</div>
+            <div class="option" onclick="selectOption(this, 1)">Podróże</div>
+            <div class="option" onclick="selectOption(this, 1)">Inne</div>
+        </div>
+    </div>
+
+    <div id="step2" class="question-container">
+        <h2>Do jakiej grupy zawodowej należysz?</h2>
+        <div class="options">
+            <div class="option" onclick="selectOption(this, 2)">Pracownik</div>
+            <div class="option" onclick="selectOption(this, 2)">Bezrobotny</div>
+            <div class="option" onclick="selectOption(this, 2)">Student</div>
+            <div class="option" onclick="selectOption(this, 2)">Przedsiębiorca</div>
+            <div class="option" onclick="selectOption(this, 2)">Emeryt</div>
+            <div class="option" onclick="selectOption(this, 2)">Oferent</div>
+            <div class="option" onclick="selectOption(this, 2)">Samozatrudniony</div>
+            <div class="option" onclick="selectOption(this, 2)">Urzędnik państwowy</div>
+        </div>
+    </div>
+
+    <div id="step3" class="question-container">
+        <h2>Jaki jest Twój miesięczny dochód?</h2>
+        <div class="options">
+            <div class="option" onclick="selectOption(this, 3)">Do 1.700 CAD</div>
+            <div class="option" onclick="selectOption(this, 3)">1.700 - 2.800 CAD</div>
+            <div class="option" onclick="selectOption(this, 3)">2.800 - 5.500 CAD</div>
+            <div class="option" onclick="selectOption(this, 3)">5.500 - 6.500 CAD</div>
+            <div class="option" onclick="selectOption(this, 3)">6.500 - 13.000 CAD</div>
+            <div class="option" onclick="selectOption(this, 3)">Powyżej 13.000 CAD</div>
+        </div>
+    </div>
+
+    <div id="step4" class="question-container">
+        <h2>Czy posiadasz zadłużenie?</h2>
+        <div class="options">
+            <div class="option" onclick="selectOption(this, 4)">Tak</div>
+            <div class="option" onclick="selectOption(this, 4)">Nie</div>
+        </div>
+    </div>
+
+    <div id="step5" class="question-container">
+        <h2>Formularz kontaktowy</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Imię" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="surname" placeholder="Nazwisko" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" placeholder="Telefon" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="amount" placeholder="Kwota pożyczki" required>
+            </div>
+            <button type="submit" style="background-color: #005e54; color: white; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; width: 100%;">
+                Wyślij wniosek
+            </button>
+        </form>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+        <p>&copy; 2024 Znajdź Idealną Pożyczkę. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body> 
+<script src="script.js"></script>
+</html>
